@@ -1,0 +1,14 @@
+//
+// Created by Lasse Lauritsen on 25/03/16.
+//
+
+#ifndef BOOSTMULTICASTEXAMPLE_BROADCASTER_H
+#define BOOSTMULTICASTEXAMPLE_BROADCASTER_H
+
+
+class broadcaster {
+
+};
+
+
+#endif //BOOSTMULTICASTEXAMPLE_BROADCASTER_H
