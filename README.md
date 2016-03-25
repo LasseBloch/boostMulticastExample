@@ -1,3 +1,4 @@
 # boostMulticastExample
-just fooling around with UDP multicast in boost.. and CLion IDE here.. 
-This will pretty much just be a repo for me, if you can use any of it great
+
+A litte project for me to get getting with socket programing in boost.
+I'm also toying around with the CLion IDE for the first time.
