@@ -6,7 +6,6 @@
 #define BOOSTMULTICASTEXAMPLE_RECEIVER_H
 
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
 
 class receiver {
 public:

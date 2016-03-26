@@ -4,6 +4,7 @@
 
 #include "receiver.h"
 #include <iostream>
+#include <boost/bind.hpp>
 
 const int multicast_port = 1900;
 
