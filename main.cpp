@@ -14,9 +14,8 @@ int main() {
         receiver rev(io, listen_addr, multicast_addr);
         broadcaster bcaster(io, multicast_addr);
 
-        for(int n = 0; n < 10; n++) {
-            std::string msg = "Hello world " + std::to_string(n);
-            bcaster.send_message(msg);
+        for(int n = 0; n < 2; n++) {
+            bcaster.send_ssdp_discover();
         }
 
         io.run();

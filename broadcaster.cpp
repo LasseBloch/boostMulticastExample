@@ -32,6 +32,17 @@ void broadcaster::send_message(const std::string& msg) {
 
 }
 
+void broadcaster::send_ssdp_discover() {
+    std::string msg;
+    msg +=  "M-SEARCH * HTTP/1.1\n\r";
+    msg +=  "HOST: 239.255.255.250:1900\n\r";
+    msg += "MAN: \"ssdp:discover\"\n\r";
+    msg += "MX: 1\n\r";
+    msg += "ST: ssdp:all\n\r";
+
+    send_message(msg);
+}
+
 void broadcaster::handle_send(const boost::system::error_code& error, size_t bytes_send) {
     std::cout << "Error code: " << error << " size of transmitted data: " << bytes_send << std::endl;
 }
