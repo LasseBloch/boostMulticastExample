@@ -11,7 +11,8 @@ class receiver {
 public:
     receiver(boost::asio::io_service& io_service,
     const boost::asio::ip::address& listen_address,
-    const boost::asio::ip::address& multicast_address);
+    const boost::asio::ip::address& multicast_address,
+    const int port);
     void handle_receive_from(const boost::system::error_code& error, size_t bytes_recvd);
 private:
     boost::asio::ip::udp::socket socket_;

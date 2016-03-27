@@ -6,11 +6,13 @@
 #include <iostream>
 #include <boost/bind.hpp>
 
-const int port = 1900;
+
+const int hello = 1900;
 
 broadcaster::broadcaster(boost::asio::io_service &io_service,
-                         const boost::asio::ip::address multicast_address) : socket_(io_service),
-                                                                             endpoint_(multicast_address, port) {
+                         const boost::asio::ip::address multicast_address,
+                         const int port) : socket_(io_service),
+                                           endpoint_(multicast_address, port) {
     // Create endpoint
     socket_.open(endpoint_.protocol());
 }

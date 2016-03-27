@@ -6,13 +6,12 @@
 #include <iostream>
 #include <boost/bind.hpp>
 
-const int multicast_port = 1900;
-
 receiver::receiver(boost::asio::io_service &io_service,
                    const boost::asio::ip::address& listen_address,
-                   const boost::asio::ip::address& multicast_address) : socket_(io_service) {
+                   const boost::asio::ip::address& multicast_address,
+                   const int port) : socket_(io_service) {
     // create the socket so that multiple may bound to the same address.
-    boost::asio::ip::udp::endpoint listen_endpoint(listen_address, multicast_port);
+    boost::asio::ip::udp::endpoint listen_endpoint(listen_address, port);
     socket_.open(listen_endpoint.protocol());
     socket_.set_option(boost::asio::ip::udp::socket::reuse_address(true));
     socket_.bind(listen_endpoint);

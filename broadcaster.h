@@ -10,7 +10,7 @@
 
 class broadcaster {
 public:
-    broadcaster(boost::asio::io_service& io_service, const boost::asio::ip::address multicast_address);
+    broadcaster(boost::asio::io_service& io_service, const boost::asio::ip::address multicast_address, const int port);
     void send_message(const std::string& msg);
     void send_ssdp_discover();
 private:
